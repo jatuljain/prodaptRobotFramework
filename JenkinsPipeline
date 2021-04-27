@@ -1,0 +1,43 @@
+pipeline {
+  agent any
+  tools {
+        jdk 'JDK 09.0.4'
+    } 
+  stages {
+	    stage('intialize') {
+	      steps {
+	        sh 'echo "PATH= ${PATH}'
+	      }
+	    }
+    
+	    stage('Run Robot Tests') {
+	      steps {
+		        sh 'python3 -m rflint --ignore LineTooLong myapp'
+		        	sh 'python3 -m robot.run --NoStatusRC --outputdir reports1 D:/Personal/Automation/Prodapt'
+		        	sh 'python3 -m robot.run --NoStatusRC --rerunfailed reports1/output.xml --outputdir reports D:/Personal/Automation/Prodapt/'
+		        	sh 'python3 -m robot.rebot --merge --output reports/output.xml -l reports/log.html -r reports/report.html reports1/output.xml reports/output.xml'
+		        	sh 'exit 0'
+	      		}
+	      post {
+        	always {
+		        script {
+		          step(
+			            [
+			              $class              : 'RobotPublisher',
+			              outputPath          : 'reports',
+			              outputFileName      : '**/output.xml',
+			              reportFileName      : '**/report.html',
+			              logFileName         : '**/log.html',
+			              disableArchiveOutput: false,
+			              passThreshold       : 50,
+			              unstableThreshold   : 40,
+			              otherFiles          : "**/*.png,**/*.jpg",
+			            ]
+		          	)
+		        }
+	  		}		
+	    }
+	}    
+  }
+  
+}

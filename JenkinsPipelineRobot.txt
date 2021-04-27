@@ -1,0 +1,38 @@
+pipeline {
+  agent any
+  tools {
+        jdk 'JAVA_HOME'
+    } 
+  stages {
+	    
+	    stage('Run Robot Tests') {
+	      steps {
+		        bat """
+		            d:
+                    cd D:\\Personal\\Automation\\Prodapt\\
+                    call robot -d my_robot_results bol.robot
+                """    
+	      		}
+
+	}    
+  }
+  post {
+                always {
+                    script {
+                        step(
+                            [
+                                $class               : 'RobotPublisher',
+                                outputPath           : 'D:\\Personal\\Automation\\Prodapt\\my_robot_results\\',
+                                outputFileName       : 'output.xml',
+                                reportFileName       : 'report.html',
+                                logFileName          : 'log.html',
+                                disableArchiveOutput : true,
+                                passThreshold        : 0,
+                                unstableThreshold    : 0,
+                                otherFiles           : "screenshot.png",
+                            ]
+                        )
+                    }
+                }
+            }
+}
