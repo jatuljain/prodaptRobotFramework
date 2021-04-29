@@ -9,9 +9,9 @@ pipeline {
 	      steps {
 		        bat """
 		            d:
-                    cd D:\\Personal\\Automation\\Prodapt\\
-                    call robot -d my_robot_results bol.robot
-                """    
+                    	   cd D:\\Personal\\Automation\\Prodapt\\
+                    	   call robot -d my_robot_results bol_Singleorder.robot
+               		 """    
 	      		}
 
 	}    
