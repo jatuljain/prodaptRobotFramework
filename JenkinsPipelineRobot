@@ -29,7 +29,7 @@ pipeline {
                                 disableArchiveOutput : true,
                                 passThreshold        : 0,
                                 unstableThreshold    : 0,
-                                otherFiles           : "screenshot.png",
+                                otherFiles           : "**/*screenshot*.png",
                             ]
                         )
                     }
