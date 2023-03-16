@@ -9,7 +9,7 @@ Suite Teardown    Close All Browsers
 
 
 *** Variables ***
-${BROWSER}		chrome
+# ${BROWSER}		chrome
 ${HOME_PAGE}     https://www.bol.com
 ${LOGIN_LINK}         //a[contains(@class,'u-show-block')]
 
