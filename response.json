@@ -1,0 +1,56 @@
+{
+    "items": [
+        {
+            "serviceGroupName": "ISP_KPN",
+            "ipVersion": "IPV6",
+            "cidr": "2210:db8::/44",
+            "start": "2210:db8::",
+            "end": "2210:db8:f:ffff:ffff:ffff:ffff:ffff",
+            "startNumeric": 45277106855730447017139556517152817152,
+            "endNumeric": 45277106855749789830253390583948115967,
+            "automaticIpBlockAssignment": false,
+            "maxAddresses": 16,
+            "freeAddresses": 16,
+            "assignedAddresses": 0,
+            "drain": false,
+            "activeDrainFlag": false,
+            "doNotAssign": false,
+            "ivsIPPool": {
+                "globalIvsServiceId": "IVS00000001",
+                "accessArea": "AA/1",
+                "okEdin": true,
+                "cidr": "2210:db8::/44",
+                "serviceName": "INTERNET",
+                "ipVersion": "IPv6"
+            }
+        },
+        {
+            "serviceGroupName": "ISP_KPN",
+            "ipVersion": "IPV6",
+            "cidr": "2211:db8::/44",
+            "start": "2211:db8::",
+            "end": "2211:db8:f:ffff:ffff:ffff:ffff:ffff",
+            "startNumeric": 45282299152588981844768087013482037248,
+            "endNumeric": 45282299152608324657881921080277336063,
+            "automaticIpBlockAssignment": false,
+            "maxAddresses": 16,
+            "freeAddresses": 16,
+            "assignedAddresses": 0,
+            "drain": false,
+            "activeDrainFlag": false,
+            "doNotAssign": false,
+            "ivsIPPool": {
+                "globalIvsServiceId": "IVS00000001",
+                "accessArea": "AA/94",
+                "okEdin": true,
+                "cidr": "2211:db8::/44",
+                "serviceName": "INTERNET",
+                "ipVersion": "IPv6"
+            }
+        }
+    ],
+    "page": 0,
+    "count": 1,
+    "size": 10,
+    "total": 2
+}
