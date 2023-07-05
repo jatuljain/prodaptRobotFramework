@@ -8,6 +8,8 @@ ${ipvalidation}    1.1.1.1 is valid IP
 @{ivs_ipv4}    85.25.23.0/24   85.26.23.0/24    20.2.2.128/25   20.2.2.128/25    85.26.23.0/24
 ${ip}   85.25.23.0/24
 ${to_div}   1000
+${token_header}    This is token Variables
+${unusedvar}
 
 *** Keywords ***
 print the arguments
@@ -28,11 +30,14 @@ Get Data from JSON file
 
     # ${cidr}   Get Value From Json    ${file}    $..cidr
     # Log To Console    ${cidr}
-    print the arguments   first=500
-    ${Data}=   Evaluate   ${to_div} / 2
-    Log To Console    ${ivs_ipv4}
-    ${new_list}=  Remove Duplicates  ${ivs_ipv4}
+    # print the arguments   first=500
+    # ${Data}=   Evaluate   ${to_div} / 2
+    # Log To Console    ${ivs_ipv4}
+    # ${new_list}=  Remove Duplicates  ${ivs_ipv4}
      
-    Log To Console    is withouth duplicate ${new_list}
-    Log To Console    ${Data}
-    Fail    msg=This Test is failed
+    # Log To Console    is withouth duplicate ${new_list}
+    # Log To Console    ${Data}
+    # Fail    msg=This Test is failed
+    ${2ndunusedvar}
+    Log To Console    \n ${tokenheader}
+

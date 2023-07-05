@@ -21,6 +21,7 @@ def checkipv6(ip):
 	except ValueError:
 		# If the input is not a valid IP address, catch the exception and print an error message
 		return "Invalid IPv6 address"
+		print("This will never be called")
 	
 	
 	
