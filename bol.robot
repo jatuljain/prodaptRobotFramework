@@ -29,7 +29,7 @@ ${CONTINUE_TO_ORDER}  //a[starts-with(., "Verder naar bestellen")]
 ${CONTINUE_ORDERING_TOP}     //*[@id="continue_ordering_top"]
 
 *** Test Cases ***
-Visit Bol
+Visit Bol    # This should make conflict
 	Open Browser			${HOME_PAGE} 	${BROWSER}
 	Click Element       ${ACCPET_COOKIE}
     Maximize Browser Window
