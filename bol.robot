@@ -28,8 +28,9 @@ ${ADD_TO_CART}  //*[@id="9300000000132991"]
 ${CONTINUE_TO_ORDER}  //a[starts-with(., "Verder naar bestellen")]
 ${CONTINUE_ORDERING_TOP}     //*[@id="continue_ordering_top"]
 
+
 *** Test Cases ***
-Visit Bol
+Visit Bol   #Adding some comment here
 	Open Browser			${HOME_PAGE} 	${BROWSER}
 	Click Element       ${ACCPET_COOKIE}
     Maximize Browser Window
