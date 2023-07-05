@@ -5,6 +5,7 @@ Library     RequestsLibrary
 
 *** Variables ***
 ${Base_URL}  https://api.bol.com/
+${unused}  var
 
 *** Test Cases ***
 Get the order status
@@ -13,6 +14,8 @@ Get the order status
     ${response} =  get on session   Get_Order_Detail   retailer/orders
     log to console   ${response.status_code}
     log to console   ${response.content}
+    Return From Keyword  ${response}
+    Log To Console    ${unused}
 
 #    Provided precondition
 #    When action
@@ -21,3 +24,6 @@ Get the order status
 *** Keywords ***
 Provided precondition
 #    Setup system under test
+
+unusedkeyword
+    log  I am unused

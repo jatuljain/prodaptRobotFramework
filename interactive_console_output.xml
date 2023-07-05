@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.11.1 on win32)" generated="20230705 11:46:43.498" rpa="false" schemaversion="2">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\jain532\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="wait until page contains">
+<arg>Inloggen</arg>
+<msg timestamp="20230705 11:46:43.975" level="FAIL">No keyword with name 'wait until page contains' found.</msg>
+<status status="FAIL" starttime="20230705 11:46:43.975" endtime="20230705 11:46:43.975"/>
+</kw>
+<kw name="click element">
+<arg>${LOGIN_LINK}</arg>
+<status status="NOT RUN" starttime="20230705 11:46:43.976" endtime="20230705 11:46:43.976"/>
+</kw>
+<kw name="wait until page contains">
+<arg>Inloggen</arg>
+<status status="NOT RUN" starttime="20230705 11:46:43.976" endtime="20230705 11:46:43.976"/>
+</kw>
+<kw name="press keys">
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${USER_LOGIN}</arg>
+<status status="NOT RUN" starttime="20230705 11:46:43.977" endtime="20230705 11:46:43.977"/>
+</kw>
+<kw name="press keys">
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${USER_PASSWORD}</arg>
+<status status="NOT RUN" starttime="20230705 11:46:43.978" endtime="20230705 11:46:43.978"/>
+</kw>
+<kw name="click element">
+<arg>${LOGIN_BUTTON}</arg>
+<status status="NOT RUN" starttime="20230705 11:46:43.978" endtime="20230705 11:46:43.978"/>
+</kw>
+<status status="PASS" starttime="20230705 11:46:43.515" endtime="20230705 11:46:46.813"/>
+</kw>
+<status status="PASS" starttime="20230705 11:46:43.515" endtime="20230705 11:46:46.813"/>
+</test>
+<status status="PASS" starttime="20230705 11:46:43.499" endtime="20230705 11:46:46.813"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
