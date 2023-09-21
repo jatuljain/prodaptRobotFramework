@@ -1,0 +1,41 @@
+{
+    "userName": "zsmart_sys_user",
+    "orderId": "ZS-123456789",
+    "yourRef": null,
+    "batch": null,
+    "schedule": null,
+    "source": "Z-Smart",
+    "priority": 9,
+    "resource": {
+        "chassisType": "7360 FX-16",
+        "linkAggregationMode": "LAG-LB",
+        "resourceName": "MAS-AEC-DSLA-2",
+        "ipAddress": "10.27.176.163",
+        "gatewayIpAddress": "10.27.176.190/27",
+        "cards": [
+            {
+                "card": "17",
+                "cardType": "FANT-G"
+            }
+        ],
+        "ports": [
+            {
+                "peeringPort": {
+                    "nodeName": "nl-nm-dkbg-ngeb-ne40e-m2f-07",
+                    "slot": 0,
+                    "card": 3,
+                    "port": 20,
+                    "eNumber": "E19235458",
+                    "eaeNumber": "EAE19235458"
+                },
+                "localPort": {
+                    "cardResource": "17",
+                    "portResource": 3
+                }
+            }
+        ],
+        "portSpeed": 10000,
+        "mcRegion": 192,
+        "eas": "EAS00000001"
+    }
+}
