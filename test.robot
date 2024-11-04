@@ -124,6 +124,7 @@ Get Data from JSON file
     # Log To Console    is withouth duplicate ${new_list}
     # Log To Console    ${Data}
     # Fail    msg=This Test is failed
-    ${2ndunusedvar}
+    # ${2ndunusedvar}
+    [Tags]    token
     Log To Console    \n ${tokenheader}
 

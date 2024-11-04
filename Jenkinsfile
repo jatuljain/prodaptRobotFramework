@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'ROBOT_TAGS', defaultValue: '', description: 'Comma-separated list of Robot Framework tags')
+        string(name: 'ROBOT_TAGS', defaultValue: 'time', description: 'Comma-separated list of Robot Framework tags')
     }
     stages {
         stage('Run Robot Tests') {
