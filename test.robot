@@ -82,8 +82,9 @@ Get Time Difference Between Utc And Local
 
 
 *** Test Cases ***
-# Play with String
-#     playng with String
+Play with String
+    log   playng with String
+
 Convert Local Time to UTC
     [Tags]    time
     ${local_datetime}    Set Variable    2001-2-3 10:11:12
@@ -94,32 +95,35 @@ Convert Local Time to UTC
     Log    UTC time: ${utc_formatted}
 
 Check utc timediff
+    [Tags]    timediff
     ${time_diff_utc_local} =    Get Time Difference Between Utc And Local
 
 
 Play with List this is Test Case
+    [Documentation]    This test case demonstrates list operations.
     list loop testing    ${RFS_TYPE_EAS}    @{EAS_LIST}
     # playing with list
 
-# Get Check IP address
-#     ${ipvalidation}=  Convert To String    ${ipvalidation}
-#     Should Not Contain    ${ipvalidation}    Invalid
-#     List Should Contain Value    ${ivs_ipv4}    ${ip}
+Get Check IP address
+    [Documentation]    This test case checks if the IP address is valid and present in the list.
+    ${ipvalidation}=  Convert To String    ${ipvalidation}
+    Should Not Contain    ${ipvalidation}    Invalid
+    List Should Contain Value    ${ivs_ipv4}    ${ip}
 
 
-# Get Data from JSON file
-#     # ${file}   Load Json From File    response.json
+Get Data from JSON file
+    # ${file}   Load Json From File    response.json
 
-#     # ${cidr}   Get Value From Json    ${file}    $..cidr
-#     # Log To Console    ${cidr}
-#     # print the arguments   first=500
-#     # ${Data}=   Evaluate   ${to_div} / 2
-#     # Log To Console    ${ivs_ipv4}
-#     # ${new_list}=  Remove Duplicates  ${ivs_ipv4}
+    # ${cidr}   Get Value From Json    ${file}    $..cidr
+    # Log To Console    ${cidr}
+    # print the arguments   first=500
+    # ${Data}=   Evaluate   ${to_div} / 2
+    # Log To Console    ${ivs_ipv4}
+    # ${new_list}=  Remove Duplicates  ${ivs_ipv4}
 
-#     # Log To Console    is withouth duplicate ${new_list}
-#     # Log To Console    ${Data}
-#     # Fail    msg=This Test is failed
-#     ${2ndunusedvar}
-#     Log To Console    \n ${tokenheader}
+    # Log To Console    is withouth duplicate ${new_list}
+    # Log To Console    ${Data}
+    # Fail    msg=This Test is failed
+    ${2ndunusedvar}
+    Log To Console    \n ${tokenheader}
 
