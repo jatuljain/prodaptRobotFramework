@@ -1,4 +1,4 @@
-#To check if the given IP address is valid or not, we can use the ipaddress module in Python. The ipaddress module provides a way to create, manipulate and operate on IPv4 and IPv6 addresses and networks. We can use the ip_address function from the ipaddress module to check if the input is a valid IP address. If the input is not a valid IP address, it will raise a ValueError exception, which we can catch and handle accordingly.
+# To check if the given IP address is valid or not, we can use the ipaddress module in Python. The ipaddress module provides a way to create, manipulate and operate on IPv4 and IPv6 addresses and networks. We can use the ip_address function from the ipaddress module to check if the input is a valid IP address. If the input is not a valid IP address, it will raise a ValueError exception, which we can catch and handle accordingly.
 import ipaddress
 
 def checkipv4(ip):
